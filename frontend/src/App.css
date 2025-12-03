@@ -1,0 +1,71 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+.logo-icon {
+  font-size: 1.3em;
+  color: #7cb342;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: all 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #7cb342;
+}
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #7cb342;
+  border-radius: 2px;
+}
+
+/* Home navbar lebih stylish */
+.navbar.home-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+.navbar.home-navbar .logo span {
+  background: linear-gradient(135deg, #7cb342 0%, #558b2f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
